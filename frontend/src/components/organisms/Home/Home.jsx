@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import ButtonWithIcon from '../../atoms/ButtonWithIcon'
 import PostsCard from '../../molecules/postsCard'
+import Image from 'next/image'
 
 const Home = () => {
   const router = useRouter()
@@ -27,18 +28,30 @@ const Home = () => {
   }, [])
 
   return (
-    <section className="home">
-      {isLoading && <p>Loading...</p>}
-      {!isLoading &&
-        loadedProducts.map((item) => (
-          <PostsCard key={item._id} blogItem={item} />
-        ))}
+    <>
+      {' '}
+      {loadedProducts.length > 0 ? (
+        <section className="home">
+          {isLoading && <p>Loading...</p>}
+          {!isLoading &&
+            loadedProducts.map((item) => (
+              <PostsCard key={item._id} blogItem={item} />
+            ))}
+        </section>
+      ) : (
+        <div className="no-data-wrapper">
+          <div className="no-data-image">
+            <Image src="/noData.svg" layout="fill" />
+          </div>
+          <h2>No Any blogs Added yet. Click + button to add</h2>
+        </div>
+      )}
       <ButtonWithIcon
         clickHandler={clickHandler}
         addClasses="add-button"
         iconPath="/create.svg"
       />
-    </section>
+    </>
   )
 }
 export default Home
