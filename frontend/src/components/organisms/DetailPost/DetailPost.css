@@ -1,0 +1,11 @@
+.detail-post {
+  padding: 0 100px;
+}
+
+.detail-post-description {
+  color: #767676;
+}
+.detail-post-title {
+  display: flex;
+  justify-content: center;
+}

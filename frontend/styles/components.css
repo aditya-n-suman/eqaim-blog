@@ -1,0 +1,10 @@
+@import '../src/components/atoms/Header/Header.css';
+@import '../src/components/atoms/ButtonWithIcon/ButtonWithIcon.css';
+
+@import '../src/components/organisms/DetailPost/DetailPost.css';
+
+@import '../src/components/molecules/postsCard/postsCard.css';
+@import '../src/components/organisms/Home/Home.css';
+@import '../src/components/organisms/PublishBlog/PublishBlog.css';
+
+@import '~/node_modules/react-markdown-editor-lite/lib/index.css';

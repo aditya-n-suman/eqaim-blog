@@ -1,0 +1,36 @@
+.home {
+  display: grid;
+  gap: 2rem;
+}
+
+.add-button {
+  background-color: #242942;
+  position: fixed;
+  bottom: 8px;
+  right: 24px;
+  border-radius: 100%;
+  padding: 8px;
+  height: 64px;
+  width: 64px;
+}
+
+@media screen and (min-width: 720px) {
+  .home {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 1224px) {
+  .home {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+  }
+}
+
+@media screen and (min-width: 2160px) {
+  .home {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4rem;
+  }
+}
