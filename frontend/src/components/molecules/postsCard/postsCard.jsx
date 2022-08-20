@@ -9,7 +9,7 @@ const PostsCard = ({ blogItem }) => {
     <Link href={`/details/${_id}`}>
       <article className="posts-card">
         <ReactMarkdown>{title}</ReactMarkdown>
-        <ReactMarkdown>{description}</ReactMarkdown>
+        <ReactMarkdown>{description.replace(/\n\n+/g, '\n')}</ReactMarkdown>
       </article>
     </Link>
   )
